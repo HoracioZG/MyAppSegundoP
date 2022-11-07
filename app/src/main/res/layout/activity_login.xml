@@ -9,6 +9,7 @@
     tools:context=".LoginActivity">
 
     <ImageView
+        android:id="@+id/logoImageMedical"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
@@ -24,7 +25,7 @@
         android:fontFamily="@font/lekton005_l"
         android:text="Bienvenido a Medical Proyect!"
         android:textSize="30dp"
-        android:transitionName="textTrans" />
+        android:transitionName="iniciaSesionTextTrans" />
 
     <TextView
         android:id="@+id/continuarLabel"
@@ -33,7 +34,8 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/lekton005_l"
         android:text="Inicia Sesion para continuar"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:transitionName="logoImageTrans"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,9 +50,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
+            android:transitionName="emailInputTextTrans"
             android:hint="Usuario">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usuarioulti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lekton005_l" />
@@ -62,10 +66,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
+            android:transitionName="passwordInputTextTrans"
             android:hint="Contraseña"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contraulti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lekton005_l"
@@ -91,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="70dp"
+            android:transitionName="buttonSignInTrans"
             android:text="INICIO" />
 
         <TextView
@@ -105,7 +112,8 @@
             android:clickable="true"
             android:focusable="true"
             android:textStyle="bold"
-            android:text="Eres nuevo? Registrate!"/>
+            android:text="Eres nuevo? Registrate!"
+            android:transitionName="newUserTrans"/>
 
 
     </LinearLayout>
